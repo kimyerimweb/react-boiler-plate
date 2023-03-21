@@ -4,8 +4,8 @@
   "description": "react styled-component",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --env development",
-    "build": "NODE_ENV=production webpack"
+    "dev": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack serve --env development",
+    "build": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,12 @@
   "homepage": "https://github.com/kimyerimweb/react-boiler-plate#readme",
   "dependencies": {
     "@loadable/component": "^5.15.3",
+    "@types/loadable__component": "^5.13.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-router-dom": "^5.3.3",
     "axios": "^1.3.4",
+    "cross-env": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
@@ -33,7 +38,15 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.21.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/node": "^18.15.5",
+    "@types/styled-components": "^5.1.26",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
     "babel-loader": "^9.1.2",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
@@ -43,8 +56,11 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
     "prettier": "^2.8.6",
     "react-refresh": "^0.14.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.2",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"

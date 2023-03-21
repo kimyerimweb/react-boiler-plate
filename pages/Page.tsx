@@ -7,7 +7,7 @@ const Container = styled.div`
 `
 
 const Page = () => {
-  return <Container>Hi I'm react boiler plate</Container>
+  return <Container>Hi I'm react boiler plate with typescript</Container>
 }
 
 export default Page
